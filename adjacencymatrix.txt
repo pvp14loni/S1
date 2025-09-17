@@ -1,35 +1,30 @@
-#include<stdio.h>
-#include<stdlib.h>
-void main()
-{
-int a[10][10],i,j,n,x;
-printf("Enter the total vertices: ");
-scanf("%d",&n);
-for(i=0;i<n;i++)
-{
-for(j=0;j<n;j++)
-{
-if(i==j)
-a[i][j]=0;
-if(i!=j)
-{
-printf("Enter 1 if there is edge between %d and %d",i,j);
-scanf("%d",&x);
-if(x>=1)
-a[i][j]=1;
-else
-a[i][j]=0;
-}
-}
-}
-printf("The adjacency matrix is\n");
-for(i=0;i<n;i++)
-{
-for(j=0;j<n;j++)
-{
-printf("%d\t",a[i][j]);
-
-}
-printf("\n");
-}
+class PrNo 
+{ 
+        public static void main (String[] args) 
+        { 
+                int size = args.length; 
+                int[] array = new int [size]; 
+                for(int i=0; i<size; i++) 
+                { 
+                        array[i] = Integer.parseInt(args[i]); 
+                } 
+                for(int i=0; i<array.length; i++) 
+                { 
+                        boolean isPrime = true; 
+ 
+                        for (int j=2; j<array[i]; j++) 
+                        { 
+ 
+                                if(array[i]%j==0) 
+                                { 
+                                        isPrime = false; 
+                                        break; 
+                                } 
+                        } 
+ 
+                        if(isPrime) 
+ 
+                                System.out.println(array[i] + " are the prime numbers in the array "); 
+                } 
+        } 
 }
